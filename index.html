@@ -129,7 +129,7 @@
       cursor: pointer;
     }
     .sc-canvas {
-      cursor: auto;
+      cursor: none;
     }
     .sc-monitor-root[data-opcode^="data_"] .sc-monitor-value-color {
       background-color: #ff8c1a;
@@ -228,7 +228,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
       const scaffolding = new Scaffolding.Scaffolding();
       scaffolding.width = 480;
       scaffolding.height = 360;
-      scaffolding.resizeMode = "stretch";
+      scaffolding.resizeMode = "preserve-ratio";
       scaffolding.editableLists = false;
       scaffolding.usePackagedRuntime = true;
       scaffolding.setup();
@@ -245,7 +245,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
         videoProvider: vm.runtime.ioDevices.video.provider
       };
 
-      scaffolding.setUsername("Player:####".replace(/#/g, () => Math.floor(Math.random() * 10)));
+      scaffolding.setUsername("player####".replace(/#/g, () => Math.floor(Math.random() * 10)));
       scaffolding.setAccentColor("#ff4c4c");
 
       try {
